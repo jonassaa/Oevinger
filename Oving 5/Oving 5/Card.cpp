@@ -89,7 +89,8 @@ string intToString(int number) {
 	ostringstream os;
 	os << number;
 	return os.str();
-}
+}
+
 
 string toString(struct CardStruct card) {
 	string ans;
@@ -102,17 +103,18 @@ string toStringShort(struct CardStruct card) {
 }
 
 
+Card::Card() {
+	valid = false;
+}
+Card::Card(Rank r, Suit s) {
+	this->r = r;
+	this->s = s;
+}
+bool Card::getValid() {
+	return this->valid;
+}
 
 
 
-class Card {
-private:
-	Rank r;
-	Suit s;
-	bool valid=false;
-
-public:
-	Card();
-	Card(Rank r,Suit s);
-	
-};
+Card test = Card::Card();
+cout<<

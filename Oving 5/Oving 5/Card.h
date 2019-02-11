@@ -15,9 +15,14 @@ struct CardStruct { Suit s; Rank r; };
 string toString(struct CardStruct card);
 string toStringShort(struct CardStruct card);
 
-class Card
-{
+class Card {
+private:
+	Rank r;
+	Suit s;
+	bool valid;
+
 public:
 	Card();
-	~Card();
+	Card(Rank r, Suit s);
+	bool getValid();
 };
