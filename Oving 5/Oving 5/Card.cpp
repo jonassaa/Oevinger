@@ -1,5 +1,6 @@
 #include "std_lib_facilities.h"
 #include "Card.h"
+#include "Utilities.h"
 
 map<Rank, int> Numbers = { {Rank::two,2},{Rank::three,3},{Rank::four,4},{Rank::five,5},{Rank::six,6},{Rank::seven,7},{Rank::eight,8},{Rank::nine,9},{Rank::ten,10},{Rank::jack,11},{Rank::queen,12},{Rank::king,13},{Rank::ace,14} };
 
@@ -106,15 +107,32 @@ string toStringShort(struct CardStruct card) {
 Card::Card() {
 	valid = false;
 }
+
 Card::Card(Rank r, Suit s) {
 	this->r = r;
 	this->s = s;
 }
+
 bool Card::getValid() {
 	return this->valid;
 }
 
+Suit Card::getSuit() {
+	return this->s;
+}
+
+Rank Card::getRank() {
+	return this->r;
+}
+
+string Card::toString() {
+	string ans;
+	ans = rankToString(this->r) + " of " + suitToString(this->s);
+	return ans;
+}
+
+string Card::toStringShort() {
+	return intToString(Numbers[this->r]) + suitToString(this->s)[0];
+}
 
 
-Card test = Card::Card();
-cout<<

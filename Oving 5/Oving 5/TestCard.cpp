@@ -10,3 +10,9 @@ void testCardFunctions() {
 	cout << "testcard to string: " << toString(testCard) << " shortString: " 
 		<< toStringShort(testCard) << endl;
 }
+
+Card test = Card::Card();
+
+void testClass() {
+	cout << test.getValid();
+}
