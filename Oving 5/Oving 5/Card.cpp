@@ -127,12 +127,12 @@ Rank Card::getRank() {
 
 string Card::toString() {
 	string ans;
-	ans = rankToString(this->r) + " of " + suitToString(this->s);
+	ans = rankToString(this->getRank()) + " of " + suitToString(this->getSuit());
 	return ans;
 }
 
 string Card::toStringShort() {
-	return intToString(Numbers[this->r]) + suitToString(this->s)[0];
+	return intToString(rankToString(this->r)[0]) + suitToString(this->s)[0];
 }
 
 

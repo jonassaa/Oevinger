@@ -7,13 +7,21 @@ class Player
 private:
 	vector<Card> cards;
 	int cardValue;
-	bool isDealer;
+	
+	string name;
+	bool lost;
 public:
 	Player();
-	Player(bool)
+	Player(bool);
 	~Player();
 	int getValue();
-	const Card& getFirstCard();
+	Card getFirstCard();
 	bool makeDecision();
 	void giveCard(Card);
+	void setName();
+	string getName();
+	vector<Card> getCards();
+	bool getLost();
+	void setLost(bool);
+	bool isDealer;
 };

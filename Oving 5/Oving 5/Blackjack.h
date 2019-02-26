@@ -6,11 +6,15 @@
 
 class Blackjack
 {
+private:
+	vector<Player> players;
+	CardDeck deck;
+
 public:
 	Blackjack();
 	~Blackjack();
 	void playBlackJack();
-	void start();
+	void dealCards();
 
 };
 
