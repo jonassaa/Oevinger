@@ -54,19 +54,19 @@ void blinkEye::attach_to(Graph_lib::Window& win)
 	win.attach(bLine);
 }
 
-emptyFace::emptyFace(Point p, int r) :blank{ p,r }, left{ Point{p.x - 12,p.y - 8} ,8}, right{ Point{p.x + 12,p.y - 8},8 } 
+emptyFace::emptyFace(Point p, int r) :Face{ p,r }, left{ Point{p.x - 12,p.y - 8} ,8 }, right{ Point{p.x + 12,p.y - 8},8 }
 {
 
 }
 
 
 void emptyFace::attach_to(Graph_lib::Window& win) {
-	blank.attach_to(win);
+	Face::attach_to(win);
 	left.attach_to(win);
 	right.attach_to(win);
 }
 
-smilingFace::smilingFace(Point p, int r) : base{ p,r }, smile{ Point{p.x,p.y + 5},r - 6,r - 10,-180,0 } {
+smilingFace::smilingFace(Point p, int r) :emptyFace{ p,r }, smile{ Point{p.x,p.y + 5},r - 6,r - 10,-180,0 } {
 	smile.set_color(Color::black);
 }
 void smilingFace::attach_to(Graph_lib::Window& win) {

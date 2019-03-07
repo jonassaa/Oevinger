@@ -48,9 +48,8 @@ public:
 	virtual void attach_to(Graph_lib::Window& win);
 };
 
-class emptyFace {
+class emptyFace : public Face {
 private:
-	Face blank;
 	eye left;
 	eye right;
 
@@ -60,13 +59,12 @@ public:
 	virtual void attach_to(Graph_lib::Window& win) ;
 };
 
-class smilingFace {
+class smilingFace :public emptyFace {
 private:
-	emptyFace base;
 	Arc smile;
 public:
 	smilingFace(Point p,int r);
-	virtual void attach_to(Graph_lib::Window& win);
+	void attach_to(Graph_lib::Window& win);
 };
 
 class sadFace {
