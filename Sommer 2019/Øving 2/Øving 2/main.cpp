@@ -6,5 +6,7 @@ int main() {
 	cout << "1 + 2 = " << sumOfOneAndTwo << '\n';
 	cout << "2 + 2 = " << add(2, 2) << '\n';
 	inputIntegersAndPrintProduct();
-	inputAndPrintInteger();
+	inputIntegersAndPrintSum();
+	isOdd()
 }
+mmm

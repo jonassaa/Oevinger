@@ -22,3 +22,31 @@ void inputAndPrintInteger() {
 	cin >> a;
 	cout << "Integer = " << a << endl;
 }
+int inputInteger() {
+	int a;
+	cout << "Input an integer: ";
+	cin >> a;
+	return a;
+}
+
+void inputIntegersAndPrintSum() {
+	int a = inputInteger();
+	int b = inputInteger();
+	cout << "The sum is: " << a + b << endl;
+}
+
+bool isOdd(int a) {
+	if (a % 2 != 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+void printHumanReadableTime(int time) {
+	int hr = time / 3600;
+	int min = (time % 3600) / 60;
+	int sec = (time % 3600) % 60;
+	cout << "The time is: " << hr << ":" << min << ":" << sec << endl;
+}
