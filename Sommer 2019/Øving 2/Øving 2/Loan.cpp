@@ -22,3 +22,9 @@ vector<int> calculateAnnuity(int loan, int avd, int interest) {
 	}
 	return ans;
 }
+
+void printLoans(int loan, int avd, int interest) {
+	vector<int> series = calculateSeries(loan, avd, interest);
+	vector<int> annuity = calculateAnnuity(loan, avd, interest);
+	cout 
+}
