@@ -14,9 +14,15 @@ int main() {
 		cout << "the number " << what << " is odd." << endl;
 	}
 	printHumanReadableTime(46784);
-	vector<int> loan = calculateSeries(5000000, 10, 2);
+	vector<int> loanSeries = calculateSeries(10000, 10, 5);
 	for (int i = 0; i < 10; i++) {
-		cout << loan[i] << " ";
+		cout << loanSeries[i] << " ";
+	}
+	cout << endl;
+
+	vector<int> loanAnnuity = calculateAnnuity(10000, 10, 5);
+	for (int i = 0; i < 10; i++) {
+		cout << loanAnnuity[i] << " ";
 	}
 	cout<<endl;
 
